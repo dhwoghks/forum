@@ -9,7 +9,7 @@ export default async function Home() {
   console.log(result);
   return (
     <div>
-      gd
+      hi
     </div>
   )
 }
