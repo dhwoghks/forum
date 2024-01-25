@@ -8,6 +8,6 @@ export default async function handler(요청, 응답){
             return 응답.status(500).json('너 왜 제목 안쓰냐');
         } 
         let result = await db.collection('post').insertOne(요청.body)
-        return 응답.status(200).json('good');
+        return 응답.status(200).redirect('/list')
     }
 }

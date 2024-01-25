@@ -3,6 +3,7 @@ import {ObjectId} from 'mongodb'
 
 export default async function handler(요청, 응답){
     if (요청.method == 'POST'){
+        console.log(요청.body)
         let 바꿀거 = {title: 요청.body.title, contents: 요청.body.contents};
         const client = await connectDB;
         const db = client.db('Forum');
