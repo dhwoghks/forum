@@ -12,9 +12,9 @@ export default async function Edit(props){
         <div className='p-20'>
             <h4>수정페이지</h4>
             <form action='/api/post/edit' method='POST'>
-                <input name='title' placeholder='글제목' defaultvalue={result.title}></input>
-                <input name='contents' placeholder='글내용' defaultvalue={result.contents}></input>
-                <input style ={{display:'none'}}name='_id' value={result._id}></input>
+                <input name='title' placeholder='글제목' defaultValue={result.title}></input>
+                <input name='contents' placeholder='글내용' defaultValue={result.contents}></input>
+                <input style ={{display:'none'}}name='_id' defaultValue={result._id}></input>
 
                 <button type='submit'>전송버튼</button>
             </form>
