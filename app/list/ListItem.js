@@ -10,7 +10,12 @@ export default function ListItem({result}) {
             <Link href={'/edit/' + result[i]._id} className="list-btn">✏️</Link>
             <button className = 'list-btn'onClick={()=>{
                 fetch('/api/post/delete', {method:'DELETE', body: result[i]._id})
-                .then(()=>{})
+                .then((r)=>{
+                  return r.json()
+                })
+                .then((r)=>{
+                  console.log(r)
+                })
                 // console.log(result[i]._id)
             }}>🗑️</button>
             <p>{result[i].contents}</p>
