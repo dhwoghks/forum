@@ -9,7 +9,7 @@ export default async function Home() {
   // console.log(result);
   return (
     <div>
-      hi
+      <object data = "https://google.com" className = 'game'></object>
     </div>
   )
 }

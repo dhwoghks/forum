@@ -113,3 +113,8 @@ nav ul li {
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
+
+.game{
+  height: 800;
+  width: 500;
+}
