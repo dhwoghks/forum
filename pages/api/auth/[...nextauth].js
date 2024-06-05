@@ -8,8 +8,8 @@ import bcrypt from 'bcrypt';
 export const authOptions = {
   providers: [
     GithubProvider({
-      clientId: '4bbcdf5aad8aa14e7dc0',
-      clientSecret: 'faba26f6dacbc9265be17b614cb477895cd98ae2',
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
     }),
 
     CredentialsProvider({
@@ -66,6 +66,6 @@ export const authOptions = {
   },
 
   adapter: MongoDBAdapter(connectDB),
-  secret: 'love+1004soapqu'  
+  secret: process.env.AUTH_SECRET
 };
 export default NextAuth(authOptions); 
