@@ -17,6 +17,14 @@ export default async function RootLayout({children}) {
     let session = await getServerSession(authOptions);
     return (
         <html lang="en">
+            <head>
+                <title>오재환의 블로그</title>
+                <meta name="description" content="여기는 오재환의 블로그입니다. 다양한 콘텐츠를 확인하세요." />
+                <meta property="og:title" content="오재환의 블로그" />
+                <meta property="og:description" content="여기는 오재환의 블로그입니다. 다양한 콘텐츠를 확인하세요." />
+                <meta property="og:image" content="/images/logo.png" />
+                <meta property="og:url" content="https://ohjaehwan.com" />
+            </head>
             <body className={inter.className}>
                 <div className='navbar'>
                     <nav>
