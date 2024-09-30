@@ -3,6 +3,7 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import SpotifyProvider from "next-auth/providers/spotify";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcrypt';
 
@@ -19,6 +20,11 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       allowDangerousEmailAccountLinking: true,
 
+    }),
+    SpotifyProvider({
+      clientId: process.env.SPOTIFY_CLIENT_ID, // 환경 변수에서 클라이언트 ID 가져오기
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET, // 환경 변수에서 클라이언트 시크릿 가져오기
+      authorization: 'https://accounts.spotify.com/authorize?scope=user-read-email,user-read-private', // 필요한 권한 설정
     }),
 
     CredentialsProvider({
