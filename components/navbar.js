@@ -13,7 +13,7 @@ export default async function Navbar() {
                         <div className="dropdown-menu">게시판</div>
                         <div className="dropdown-content">
                             <a href="/write">글쓰기</a>
-                            <a href="list">글목록</a>
+                            <a href="/list">글목록</a>
                             <a href="#">Menu1-3</a>
                             <a href="#">Menu1-4</a>
                         </div>
