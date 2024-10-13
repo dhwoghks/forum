@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar.js"
+import Navbar from "../components/navbar.js";
+import Footer from "../components/Footer.js"; // Footer 컴포넌트 추가
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,6 +50,7 @@ export default async function RootLayout({ children }) {
             <body className={inter.className}>
                 <Navbar/>
                 {children}
+                <Footer /> {/* Footer 추가 */}
             </body>
         </html>
     );
